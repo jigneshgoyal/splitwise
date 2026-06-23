@@ -34,6 +34,8 @@ export async function proxy(request: NextRequest) {
     secret: process.env.NEXTAUTH_SECRET,
   });
 
+  console.log("token", process.env.NEXTAUTH_SECRET)
+
   const isLoggedIn = !!token;
 
   // Redirect to login if accessing protected route without auth
